@@ -70,6 +70,6 @@ public class OrderService {
     public List<Order> getOrdersWithProductInCategory(String category) {
         return orders.stream()
                 .filter(o -> o.getProducts().stream().anyMatch(p -> p.getCategory().equals(category)))
-                .collect(Collectors.toList());
+                .toList();
     }
 }
